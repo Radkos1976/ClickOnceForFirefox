@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\ifs]
+@="URL:Open IFS Hyperlink"
+"URL Protocol"="ifs"
+
+[HKEY_CLASSES_ROOT\IFS\shell]
+
+[HKEY_CLASSES_ROOT\IFS\shell\open]
+
+[HKEY_CLASSES_ROOT\IFS\shell\open\command]
+@="cmd /V:ON /C \"SET r=%1 & SET s=!r:ifs:=! & rundll32.exe dfshim.dll ShOpenVerbApplication !s:_= !\""
