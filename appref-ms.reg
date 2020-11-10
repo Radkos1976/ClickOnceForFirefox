@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\appref-ms]
+@="URL:Open Application Manifest Hyperlink"
+"URL Protocol"="appref-ms"
+
+[HKEY_CLASSES_ROOT\appref-ms\shell]
+
+[HKEY_CLASSES_ROOT\appref-ms\shell\open]
+
+[HKEY_CLASSES_ROOT\appref-ms\shell\open\command]
+@="cmd /V:ON /C \"SET r=%1 & SET s=!r:appref-ms:=! & rundll32.exe dfshim.dll ShOpenVerbApplication !s:_= !\""
